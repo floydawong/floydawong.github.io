@@ -1,0 +1,16 @@
+license = "MIT"
+homepage = "http://floyda.site"
+min_version = "0.11.0"
+# demo = "https://zola-after-dark.netlify.com"
+
+[extra]
+
+
+[author]
+name = "Floyda"
+homepage = "http://floyda.site"
+
+[original]
+author =  "Floyda"
+homepage = "http://floyda.site"
+repo = "https://github.com/floydawong"

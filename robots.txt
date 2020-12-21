@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://floyda.site/sitemap.xml

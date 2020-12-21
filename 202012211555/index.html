@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+      <title>Floyda&#x27;s Blog</title>
+
+      
+
+      
+          <link rel="stylesheet" href="http://floyda.site/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="http:&#x2F;&#x2F;floyda.site">
+                                <span itemprop="name">Home
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="http:&#x2F;&#x2F;floyda.site&#x2F;categories">
+                                <span itemprop="name">Categories
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="http:&#x2F;&#x2F;floyda.site&#x2F;tags">
+                                <span itemprop="name">Tags
+                                </span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https:&#x2F;&#x2F;github.com&#x2F;floydawong">
+                                <span itemprop="name">Github
+                                </span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">[Rust报错]error: `cargo run` could not determine which binary to run. Use the `--bin` option to specify a binary, or the `default-run` manifest key</h1>
+        <span class="muted">
+    <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>1 minute read</span>
+    <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2020-12-21
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <p><code>cargo</code>无法确定要运行哪一个二进制文件, 可以使用<code>--bin</code>指定一个二进制文件, 或者在<code>cargo.toml</code>中加一个<code>default-run</code>的key.</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">cargo</span><span style="color:#c0c5ce;"> run</span><span style="color:#bf616a;"> --bin</span><span style="color:#c0c5ce;"> project_name_or_binary_name
+</span></code></pre>
+<p>or</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">[package]
+</span><span style="color:#bf616a;">name </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">hello</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#bf616a;">version </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">0.1.0</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#bf616a;">authors </span><span style="color:#c0c5ce;">= [&quot;</span><span style="color:#a3be8c;">Floyda &lt;floyda@163.com&gt;</span><span style="color:#c0c5ce;">&quot;]
+</span><span style="color:#bf616a;">edition </span><span style="color:#c0c5ce;">= &quot;</span><span style="color:#a3be8c;">2018</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#bf616a;">default-run</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">hello</span><span style="color:#c0c5ce;">&quot; </span><span style="color:#65737e;"># 默认运行哪个二进制文件
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+</span><span style="color:#c0c5ce;">[dependencies]
+
+[[bin]]
+</span><span style="color:#bf616a;">name</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">foo</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#bf616a;">path</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">src/foo.rs</span><span style="color:#c0c5ce;">&quot;
+</span></code></pre><h2 id="can-kao-lian-jie">参考链接</h2>
+<blockquote>
+<p><a href="https://stackoverflow.com/questions/51785457/how-can-i-specify-which-crate-cargo-run-runs-by-default-in-the-root-of-a-cargo">stackoverflow</a><br />
+<a href="https://doc.rust-lang.org/cargo/reference/manifest.html#the-default-run-field">doc.rust-lang.org</a></p>
+</blockquote>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                    
+                    in <a href="http://floyda.site/categories/rustbao-cuo/">Rust报错</a>
+                
+                
+                    and tagged
+                    
+                        <a href="http://floyda.site/tags/rust/">Rust</a>
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+</html>
